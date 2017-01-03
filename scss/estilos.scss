@@ -1,0 +1,447 @@
+$texto: #111111;
+$principal: #12AFAF;
+$secundario: #009500;
+
+html{
+    font-size: 15px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: $texto;
+}
+
+.bienvenidos{
+    background: url("../images/fondo-bienvenida.png") no-repeat center center;
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-encabezado{
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;  
+}
+
+.texto-encabezado .display-4{
+    margin-top: 4rem;
+}
+
+.encabezado{
+    background: $texto;
+    color: #ffffff;
+    padding: .5rem 0;
+    transition: all .5s ease;
+}
+.encabezado.fondo-menu{
+    background: #064e48;
+    padding: 1rem 0;
+}
+
+.encabezado .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.encabezado .logo img{
+    height: auto;
+    width: 150px;
+}
+/*Estilos boton buscar , menu*/
+
+.boton-buscar, .boton-menu{
+    border: 0;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 .4rem;
+    background: transparent;
+    color: #fff;
+}
+
+.boton-buscar:focus, 
+.boton-menu:focus{
+    outline: 0;
+}
+
+.boton-buscar{
+    margin-left: auto;
+    margin-right: .8rem;
+}
+
+#bloque-buscar{
+    flex: 1 1 100%;
+}
+
+.contenedor-bloque-buscar{
+    display: flex;
+    height: 3rem;
+    margin: 1rem 0;
+}
+
+.contenedor-bloque-buscar input[type="text"]{
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 1rem;
+    flex: 1 1 auto;
+}
+
+.contenedor-bloque-buscar input[type="submit"]{
+    flex: 0 1 auto;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    background: $principal;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+#menu-principal{
+    flex: 1 1 100%;
+    
+}
+
+#menu-principal ul{
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0 0 0;
+}
+
+#menu-principal ul a{
+    display: block;
+    padding: .8rem 0;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    border-top: 1px solid #8c8888;
+    text-decoration: none;
+}
+
+#menu-principal ul a:hover,
+#menu-principal ul li.active a {
+    color: $principal;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $principal;
+    border-color: transparent;
+    margin-top: 1rem;
+    transition: all .5s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:active:hover {
+    border-color: transparent;
+    background-color: $secundario;
+}
+
+.texto-encabezado .display-4{
+    margin-top: 4rem;
+}
+
+.flecha-bajar a {
+    display: inline-block;
+    color: #fff;
+    font-size: 4rem;
+    animation: flecha-animada 2s ease-in-out infinite;
+}
+
+@keyframes flecha-animada{
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(6px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+/**/
+.agencia{
+    background: $principal;
+    color: #fff;
+}
+
+.agencia img{
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+.tu-mejor-eleccion h2 span{
+    color: $principal;
+}
+
+.tu-mejor-eleccion ul,
+.tu-mejor-eleccion ul li{
+    list-style: none;
+}
+
+.tu-mejor-eleccion ul li .fa{
+    font-size: 2.3rem;
+    background: $secundario;
+    border-radius: 50%;
+    width: 4.7rem;
+    height: 4.7rem;
+    line-height: 4.7rem;
+    color: #fff;
+}
+
+.tu-mejor-eleccion ul li .contenedor-eleccion h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: .8rem;
+}
+
+.tu-mejor-eleccion ul li{
+    min-height: 9rem;
+}
+
+.servicios{
+    background: url("../images/rail.svg") no-repeat center center;
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed !important;
+}
+
+.servicios article{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.servicios img{
+    flex: 0 0 60px;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.servicios h3{
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    flex: 1 1 auto;
+}
+.servicios h3 a{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+.servicios h3 a::after{
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 2rem;
+    margin-left: 1rem;
+    opacity: .5;
+    position: relative;
+    left: 0;
+    transition: all .5s ease;
+}
+.servicios h3 a:hover::after{
+    left: -.5rem;
+    opacity: 1;
+    color: $principal;
+}
+.ultimos-proyectos a{
+    text-decoration: none;
+}
+.ultimos-proyectos a h4{
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: $texto;
+}
+.ultimos-proyectos .container{
+    padding-left: 0;
+    padding-right: 0;
+}
+.ultimos-proyectos a img{
+    min-height: 300px;
+}
+.ultimos-proyectos .owl-nav{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.ultimos-proyectos .owl-next,
+.ultimos-proyectos .owl-prev{
+    font-size: 3rem;
+    margin: 0 .5rem;
+    color: $principal;
+}
+.ultimos-proyectos .owl-next_hover,
+.ultimos-proyectos .owl-prev_hover{
+    transition: all .5s ease;
+    color: $secundario;
+}
+.piedepagina {
+    background: $texto;
+    color: #fff;
+    text-align: center;
+    font-size: .9rem;
+}
+.piedepagina .redes{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.piedepagina .redes a{
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 .7rem;
+    opacity: .7;
+}
+
+.piedepagina .redes a:hover{
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 .7rem;
+    opacity: 1;
+    transition: all .5s ease;
+}
+.ir-arriba{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    color: $principal;
+    text-decoration: none;
+    z-index: 99999;
+    line-height: 0;
+    transition: all .5s ease;
+    display: none;
+}
+.ir-arriba:hover,
+.ir-arriba:focus{
+    outline: 0; //??
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*Media queries*/
+@media (min-width:768px){
+    #menu-principal{
+        height: auto !important;
+        display: block;
+        flex: 0 1 auto;
+        margin-left: auto;
+        order: 1;
+    }
+    #menu-principal ul{
+        display: flex;
+        margin: 0 0 0 0;
+    }
+    #menu-principal ul li a{
+        padding: .8rem;
+        margin: 0 .3rem;
+        border-top: 0px;
+        text-transform: capitalize;
+        border-bottom: 4px solid transparent;
+        transition: all .5s ease;
+    }
+    #menu-principal ul li.active a,
+    #menu-principal ul li a:hover{
+        color: $principal;
+        border-bottom: 4px solid;
+    }
+    .boton-buscar{
+        margin-left: 1rem;
+        margin-right: 0;
+        order: 2;
+    }
+    #bloque-buscar{
+        order: 3;
+        position: absolute;
+        width: 20rem;
+        right: 2.5rem;
+        top: 2.5rem;
+        transition: all .5s ease;
+    }
+    /**/
+    .servicios article{
+        margin: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .servicios img{
+        margin-right: 0;
+        margin-bottom: 1rem;
+        flex: 0 0 140px;
+        transition: all 1s ease;
+    }
+    .servicios article:hover img{
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+    }
+    .servicios h3 a::after{
+        display: none;
+    }
+    .servicios h3 {
+        margin: 0 0 .5rem 0;
+        font-size: 1.3rem;
+        flex: 0 1 auto;
+    }
+    .servicios h3 a{
+        display: block;
+        width: 100%;
+    }
+    .servicios p{
+        width: 100%;
+    }
+    .btn-secondary{
+        margin-top: auto;
+    }
+}
+
+@media (min-width:992px){
+    html{
+        font-size: 16px;
+    }
+    .tu-mejor-eleccion ul li{
+        display: flex;
+    }
+    .tu-mejor-eleccion ul li .fa{
+        text-align: center;
+        flex: 0 1 auto;
+        margin-right: 1rem;
+        transition: all 1s ease;
+    }
+    .tu-mejor-eleccion ul li:hover .fa{
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+        background: $principal;
+    }
+    .contenedor-eleccion{
+        flex: 1 0 0px;
+    }
+    .tu-mejor-eleccion ul li .contenedor-eleccion h4{
+        margin-top: 0;
+        font-size: 1rem;
+    }
+    .tu-mejor-eleccion ul li p{
+        font-size: .85rem;
+    }
+    .tu-mejor-eleccion ul:first-child .fa{
+        order: 1;
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+    
+    
+    
+    
+    
+    
+}
